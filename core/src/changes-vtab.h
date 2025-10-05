@@ -37,7 +37,11 @@
 #define CHANGES_VTAB_H
 
 #if !defined(SQLITEINT_H)
+#ifdef SQLITE3MC_AMALGAMATION
+#include "sqlite3mc_amalgamation.h"
+#else
 #include "sqlite3ext.h"
+#endif
 #endif
 SQLITE_EXTENSION_INIT3
 
